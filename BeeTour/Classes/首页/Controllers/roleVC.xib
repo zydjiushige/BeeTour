@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="roleVC">
+            <connections>
+                <outlet property="myWebView" destination="iet-Vt-TwC" id="tLg-oQ-vx0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usw-7S-B8p">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nr-FT-AGs">
+                            <rect key="frame" x="0.0" y="28.5" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Hs3-Kf-I8O"/>
+                                <constraint firstAttribute="width" constant="34" id="yFy-3t-Wyk"/>
+                            </constraints>
+                            <state key="normal" image="ico_arrow_back"/>
+                            <connections>
+                                <action selector="goBack:" destination="-1" eventType="touchUpInside" id="TqV-1d-80C"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUi-BK-gDT">
+                            <rect key="frame" x="95" y="35" width="130" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="VPT-ZF-4dx"/>
+                                <constraint firstAttribute="width" constant="130" id="xi4-Sa-xH4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="9Nr-FT-AGs" firstAttribute="leading" secondItem="usw-7S-B8p" secondAttribute="leading" id="2eL-r0-6TK"/>
+                        <constraint firstItem="9Nr-FT-AGs" firstAttribute="centerY" secondItem="PUi-BK-gDT" secondAttribute="centerY" id="V5M-pA-z5g"/>
+                        <constraint firstAttribute="height" constant="64" id="fbg-0a-i13"/>
+                        <constraint firstAttribute="bottom" secondItem="PUi-BK-gDT" secondAttribute="bottom" constant="8" id="n6o-yj-2bP"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iet-Vt-TwC">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="h9P-pB-GxJ"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iet-Vt-TwC" firstAttribute="top" secondItem="usw-7S-B8p" secondAttribute="bottom" id="6Gb-9Q-Xnw"/>
+                <constraint firstAttribute="bottom" secondItem="iet-Vt-TwC" secondAttribute="bottom" id="JAG-9b-wMK"/>
+                <constraint firstItem="usw-7S-B8p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LSv-HV-599"/>
+                <constraint firstItem="PUi-BK-gDT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b35-Tm-rX0"/>
+                <constraint firstItem="usw-7S-B8p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cXc-Y5-euf"/>
+                <constraint firstAttribute="trailing" secondItem="usw-7S-B8p" secondAttribute="trailing" id="dBQ-cZ-qIp"/>
+                <constraint firstItem="iet-Vt-TwC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gq8-Yg-q7L"/>
+                <constraint firstAttribute="trailing" secondItem="iet-Vt-TwC" secondAttribute="trailing" id="hwh-eu-KTL"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_arrow_back" width="34" height="34"/>
+    </resources>
+</document>

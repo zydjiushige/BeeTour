@@ -1,0 +1,80 @@
+//
+//  PrefixHeader.pch
+//  BeeTour
+//
+//  Created by 雍丹 赵 on 16/3/16.
+//  Copyright © 2016年 雍丹 赵. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define NJLog(...) NSLog(__VA_ARGS__)
+#else
+#define NJLog(...)
+#endif
+
+
+#import <AFNetworking.h>
+#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/SDImageCache.h>
+#import <SDWebImageOperation.h>
+#import <MBProgressHUD.h>
+#import <ProgressHUD.h>
+#import "Common.h"
+#import "signUpVC.h"
+#import "loginInVC.h"
+#import "Helper.h"
+#import <UIImageView+WebCache.h>
+#import <MJRefresh.h>
+
+#import "HttpRequestManager.h"
+// HIDDDEN
+#define NAVBARHIDDEN self.navigationController.navigationBarHidden = YES
+// NAVBACK
+#define NAVBACK  [self.navigationController popViewControllerAnimated:YES];
+
+#define UISCREEN [UIScreen mainScreen].bounds
+//color
+#define gray [UIColor colorWithRed:240/255.0 green:241/255.0 blue:242/255.0 alpha:1.0]
+#define mainOrange  [UIColor colorWithRed:224/255.0 green:74/255.0 blue:34/255.0 alpha:1.0]
+// 注册
+#define signUpEmailUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/reg/email/V1"
+#define signUpNameUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/reg/username/V1"
+// 登录
+#define signInUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/login/V1"
+// 第三方登录
+#define thirdSignInUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/login/oath/V1"
+//修改密码
+#define changePasswordUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/common/update/passwd/V1"
+//注销登录
+#define SIGNUPUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/login/logout/V1"
+
+//qiniu Token
+#define getQiniuToken @"http://192.168.0.238:8080/springmvc-mongo/uptoken"
+#define qiniuToken @""
+//获取个人信息
+#define getInfoUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/common/getByCommon/V1"
+// 更新个人信息
+#define updateInfoUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/common/update/V1/"
+
+// 主页面
+#define HostUrl @"http://192.168.0.238:8080/springmvc-mongo/"
+#define getUserHeadImageURL @"http://192.168.0.238:8080/ytst-api-framework/app/user/common/getAvatar/V1/"
+// 获取用户收藏信息
+#define getAllFavInfoUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/collection/V1/"
+// 删除收藏
+#define deleteFavInfoUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/collection/V1/"
+
+#define FAVURL @"http://192.168.0.238:8080/ytst-api-framework/app/user/collection/V1"
+// 上传URL
+#define upLoadUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/common/update/"
+// qiniuURL
+#define qiniuURL @"http://7xsqm8.com2.z0.glb.qiniucdn.com/"
+
+//#define signUpUrl @"http://192.168.0.238:8080/ytst-api-framework/app/user/reg/email/V1"
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="lawVC">
+            <connections>
+                <outlet property="lawWebView" destination="lcg-41-PXB" id="i7n-LY-pSk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1U-qK-Byw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDh-Yn-Cm9">
+                            <rect key="frame" x="139" y="29" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="0aM-52-LB9"/>
+                                <constraint firstAttribute="width" constant="42" id="Xsd-bi-AlM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKn-wP-ZOt">
+                            <rect key="frame" x="0.0" y="23" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="7tU-XP-jpQ"/>
+                                <constraint firstAttribute="height" constant="34" id="UJo-mv-EYY"/>
+                            </constraints>
+                            <state key="normal" image="ico_arrow_back"/>
+                            <connections>
+                                <action selector="goBack:" destination="-1" eventType="touchUpInside" id="DEu-pW-oCS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="LKn-wP-ZOt" firstAttribute="centerY" secondItem="lDh-Yn-Cm9" secondAttribute="centerY" id="5dk-WA-NgX"/>
+                        <constraint firstAttribute="bottom" secondItem="lDh-Yn-Cm9" secondAttribute="bottom" constant="15" id="96e-FE-YM4"/>
+                        <constraint firstAttribute="height" constant="65" id="Qtc-uh-skS"/>
+                        <constraint firstItem="LKn-wP-ZOt" firstAttribute="leading" secondItem="W1U-qK-Byw" secondAttribute="leading" id="iMk-X0-Ykg"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-41-PXB">
+                    <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6NT-ee-dVb"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lcg-41-PXB" firstAttribute="top" secondItem="W1U-qK-Byw" secondAttribute="bottom" id="5bR-fu-056"/>
+                <constraint firstItem="lDh-Yn-Cm9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Acv-o9-HPJ"/>
+                <constraint firstItem="W1U-qK-Byw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JR7-hg-fM5"/>
+                <constraint firstItem="W1U-qK-Byw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KZY-qW-NIb"/>
+                <constraint firstAttribute="trailing" secondItem="lcg-41-PXB" secondAttribute="trailing" id="YYL-3j-SMq"/>
+                <constraint firstAttribute="trailing" secondItem="W1U-qK-Byw" secondAttribute="trailing" id="ZuR-Gd-hSM"/>
+                <constraint firstItem="lcg-41-PXB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b64-5r-daB"/>
+                <constraint firstItem="W1U-qK-Byw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eFX-pq-iVf"/>
+                <constraint firstItem="lcg-41-PXB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lHe-Rp-M9u"/>
+                <constraint firstAttribute="bottom" secondItem="lcg-41-PXB" secondAttribute="bottom" id="rqK-gH-eOu"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="eFX-pq-iVf"/>
+                    <exclude reference="lHe-Rp-M9u"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_arrow_back" width="34" height="34"/>
+    </resources>
+</document>

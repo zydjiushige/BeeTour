@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="tipsVC">
+            <connections>
+                <outlet property="tipsWebView" destination="m45-Rc-o76" id="XOo-GH-Lzb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m45-Rc-o76">
+                    <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ppK-Us-NlB"/>
+                    </connections>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGG-2x-Llr">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hI0-Gw-Lmg">
+                            <rect key="frame" x="1" y="23" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="dt9-qZ-lq3"/>
+                                <constraint firstAttribute="height" constant="34" id="yFH-Zy-KwZ"/>
+                            </constraints>
+                            <state key="normal" image="ico_arrow_back"/>
+                            <connections>
+                                <action selector="goBack:" destination="-1" eventType="touchUpInside" id="d9L-Cd-Opa"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-5m-55P">
+                            <rect key="frame" x="139" y="29" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="WOr-Eq-seY"/>
+                                <constraint firstAttribute="height" constant="21" id="oLv-yE-itb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hI0-Gw-Lmg" firstAttribute="centerY" secondItem="bmz-5m-55P" secondAttribute="centerY" id="Swt-Du-EU4"/>
+                        <constraint firstItem="hI0-Gw-Lmg" firstAttribute="leading" secondItem="hGG-2x-Llr" secondAttribute="leading" constant="1" id="XU9-Lp-vEg"/>
+                        <constraint firstAttribute="bottom" secondItem="bmz-5m-55P" secondAttribute="bottom" constant="15" id="fvg-qY-mCz"/>
+                        <constraint firstAttribute="height" constant="65" id="shM-Ix-1lN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="m45-Rc-o76" secondAttribute="trailing" id="H2Z-h2-fx4"/>
+                <constraint firstAttribute="bottom" secondItem="m45-Rc-o76" secondAttribute="bottom" id="JEO-wK-yix"/>
+                <constraint firstItem="hGG-2x-Llr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NrJ-sA-eBa"/>
+                <constraint firstAttribute="trailing" secondItem="hGG-2x-Llr" secondAttribute="trailing" id="brO-JX-zkb"/>
+                <constraint firstItem="m45-Rc-o76" firstAttribute="top" secondItem="hGG-2x-Llr" secondAttribute="bottom" id="dAd-w3-acm"/>
+                <constraint firstItem="hGG-2x-Llr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hAH-lT-dmT"/>
+                <constraint firstItem="m45-Rc-o76" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jaa-90-hDX"/>
+                <constraint firstItem="bmz-5m-55P" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wgJ-jD-xTD"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_arrow_back" width="34" height="34"/>
+    </resources>
+</document>

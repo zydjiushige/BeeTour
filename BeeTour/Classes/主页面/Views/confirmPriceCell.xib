@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="confirmPriceCell" rowHeight="161" id="KGk-i7-Jjw" customClass="confirmPriceCell">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="316" height="160.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YyQ-NJ-ixg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chd-py-COE">
+                        <rect key="frame" x="0.0" y="40" width="320" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfT-yO-qh6">
+                        <rect key="frame" x="0.0" y="120" width="320" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNy-my-8Tl">
+                        <rect key="frame" x="0.0" y="80" width="320" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nNy-my-8Tl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="0wr-sZ-iyE"/>
+                    <constraint firstItem="nNy-my-8Tl" firstAttribute="top" secondItem="chd-py-COE" secondAttribute="bottom" id="2gw-dn-Wso"/>
+                    <constraint firstItem="YyQ-NJ-ixg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="61b-db-RBc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="YyQ-NJ-ixg" secondAttribute="trailing" constant="-12" id="62i-b0-0fu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QfT-yO-qh6" secondAttribute="bottom" constant="-7.5" id="6A2-VM-5D6"/>
+                    <constraint firstItem="chd-py-COE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="7oM-ok-fNe"/>
+                    <constraint firstItem="QfT-yO-qh6" firstAttribute="top" secondItem="nNy-my-8Tl" secondAttribute="bottom" id="E33-NK-avT"/>
+                    <constraint firstItem="chd-py-COE" firstAttribute="height" secondItem="YyQ-NJ-ixg" secondAttribute="height" id="Gpo-G9-i09"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="chd-py-COE" secondAttribute="trailing" constant="-12" id="H4c-9f-1Cc"/>
+                    <constraint firstItem="QfT-yO-qh6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="dA9-mR-xJp"/>
+                    <constraint firstItem="QfT-yO-qh6" firstAttribute="height" secondItem="YyQ-NJ-ixg" secondAttribute="height" id="dS8-ZD-X1c"/>
+                    <constraint firstItem="nNy-my-8Tl" firstAttribute="height" secondItem="YyQ-NJ-ixg" secondAttribute="height" id="fwY-8B-cjQ"/>
+                    <constraint firstItem="chd-py-COE" firstAttribute="top" secondItem="YyQ-NJ-ixg" secondAttribute="bottom" id="gGS-zw-1qu"/>
+                    <constraint firstItem="YyQ-NJ-ixg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="nqr-LU-IF9"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nNy-my-8Tl" secondAttribute="trailing" constant="-12" id="wnq-LW-UaD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QfT-yO-qh6" secondAttribute="trailing" constant="-12" id="yDM-zc-6is"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="263" y="361.5"/>
+        </tableViewCell>
+    </objects>
+</document>

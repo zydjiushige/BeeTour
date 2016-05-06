@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderInfoReserveCell" id="KGk-i7-Jjw" customClass="orderInfoReserveCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reserve Phone ﹡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="483-gy-nNc">
+                        <rect key="frame" x="8" y="11" width="130" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="6V5-EM-dKI"/>
+                            <constraint firstAttribute="width" constant="130" id="tyN-GM-USr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBZ-hR-OZg">
+                        <rect key="frame" x="134" y="6" width="143" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Feh-1p-Cx4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_ico_name" translatesAutoresizingMaskIntoConstraints="NO" id="QVg-26-q48">
+                        <rect key="frame" x="283" y="7" width="32" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="GRF-M9-em9"/>
+                            <constraint firstAttribute="height" constant="27" id="gnG-WJ-6G6"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="483-gy-nNc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FfA-Lz-0Yb"/>
+                    <constraint firstItem="mBZ-hR-OZg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="126" id="KMH-Dw-1Be"/>
+                    <constraint firstItem="mBZ-hR-OZg" firstAttribute="leading" secondItem="483-gy-nNc" secondAttribute="trailing" constant="-4" id="Tcb-vz-rIR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QVg-26-q48" secondAttribute="trailing" constant="-3" id="fHi-hQ-Rtz"/>
+                    <constraint firstItem="QVg-26-q48" firstAttribute="centerY" secondItem="mBZ-hR-OZg" secondAttribute="centerY" id="fXr-9B-vST"/>
+                    <constraint firstItem="483-gy-nNc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="k2z-Sn-G2s"/>
+                    <constraint firstItem="QVg-26-q48" firstAttribute="leading" secondItem="mBZ-hR-OZg" secondAttribute="trailing" constant="6" id="ncc-Nd-FcW"/>
+                    <constraint firstItem="mBZ-hR-OZg" firstAttribute="centerY" secondItem="483-gy-nNc" secondAttribute="centerY" id="rx8-LM-iqn"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="edit_ico_name" width="29" height="29"/>
+    </resources>
+</document>
