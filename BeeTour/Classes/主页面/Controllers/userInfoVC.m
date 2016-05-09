@@ -429,6 +429,8 @@
                     
                     cell.ageLable.text = [NSString stringWithFormat:@"%d",_nowYear-_getYear];
                     
+                    
+                    
                 }
                 
             }
@@ -437,6 +439,8 @@
                 cell.ageLable.text = [NSString stringWithFormat:@"%d",_nowYear-_getYear];
                 
             }
+            
+            
             cell.birthdayLable.userInteractionEnabled = YES;
             
             // 点击生日Lable出现日期选择器

@@ -152,6 +152,7 @@
 - (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
                  didCompletePayment:(PayPalPayment *)completedPayment {
     // Payment was processed successfully; send to server for verification and fulfillment.
+    // 付款是成功处理,发送到服务器进行验证和实现。
     [self verifyCompletedPayment:completedPayment];
     
     // Dismiss the PayPalPaymentViewController.
@@ -162,15 +163,22 @@
     // The payment was canceled; dismiss the PayPalPaymentViewController.
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+// Send the payment response to your servers for verification, capture, or processing, as well as any other processing required for your business, such as fulfillment.
+// 发送付款响应服务器验证,捕获、或处理,以及其他所需处理您的业务,比如成就感。
+
+// Tip: At this point, for an immediate payment, the payment has been completed and the user has been charged. For an authorization/capture payment or an order, your server still must capture the payment to actually charge the user. If you can't reach your server, it is important that you save the proof of payment and try again later.
+// 提示:在这一点上,立即付款,付款已经完成,用户被指控。授权/捕获支付或订单,服务器还必须捕获支付实际用户收费。如果你不能达到你的服务器,它是重要的保存付款证明并稍后再试。
 - (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
     // Send the entire confirmation dictionary
     NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation
                                                            options:0
                                                              error:nil];
     NJLog(@"交易完-----%@",confirmation);
+    
     // Send confirmation to your server; your server should verify the proof of payment
     // and give the user their goods or services. If the server is not reachable, save
     // the confirmation and try again later.
+    // / /确认发送给服务器,服务器应该核实付款的证明/ /和给用户他们的商品或服务。如果服务器是不可到达的,保存/ /确认,稍后再试。
 }
 /*
 #pragma mark - Navigation
